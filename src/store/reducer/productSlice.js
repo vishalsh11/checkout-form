@@ -8,7 +8,7 @@ const initialState = {
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       image:
         "https://cdn.pixabay.com/photo/2021/01/03/02/24/iphone-12-pro-5883473_1280.jpg",
-      price: 499,
+      price: 499.65,
       quantity: 0,
     },
     {
@@ -18,7 +18,7 @@ const initialState = {
         "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       image:
         "https://cdn.pixabay.com/photo/2014/11/12/15/48/ebook-528463_1280.jpg",
-      price: 299,
+      price: 299.33,
       quantity: 0,
     },
     {
@@ -28,7 +28,7 @@ const initialState = {
         "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       image:
         "https://cdn.pixabay.com/photo/2015/11/09/14/43/laptop-1035345_1280.jpg",
-      price: 899,
+      price: 899.45,
       quantity: 0,
     },
   ],

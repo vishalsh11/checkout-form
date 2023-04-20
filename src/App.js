@@ -56,6 +56,9 @@ export default function App() {
                 value={shipping.name || ""}
                 required
                 onChange={handleShippingChange}
+                style={{
+                  backgroundColor: "#f1f3f5",
+                }}
               />
               <Form.Control.Feedback type="invalid">
                 Please enter your name.
@@ -71,6 +74,9 @@ export default function App() {
                 value={shipping.address || ""}
                 required
                 onChange={handleShippingChange}
+                style={{
+                  backgroundColor: "#f1f3f5",
+                }}
               />
               <Form.Control.Feedback type="invalid">
                 Please enter your address.
@@ -87,6 +93,9 @@ export default function App() {
                 value={shipping.contact || ""}
                 required
                 onChange={handleShippingChange}
+                style={{
+                  backgroundColor: "#f1f3f5",
+                }}
               />
               <Form.Control.Feedback type="invalid">
                 Contact number should be of 10 digits.
@@ -95,7 +104,7 @@ export default function App() {
 
             <h2>Billing Information</h2>
             {/* <Row className="mb-3"> */}
-            <Form.Group as={Col} className="mb-3" controlId="billingName">
+            <Form.Group className="mb-3" controlId="billingName">
               <Form.Label>Name</Form.Label>
               <Form.Control
                 type="text"
@@ -104,13 +113,16 @@ export default function App() {
                 value={billing.name || ""}
                 required
                 onChange={handleBillingChange}
+                style={{
+                  backgroundColor: "#f1f3f5",
+                }}
               />
               <Form.Control.Feedback type="invalid">
                 Please enter your name.
               </Form.Control.Feedback>
             </Form.Group>
 
-            <Form.Group as={Col} className="mb-3" controlId="billingAddress">
+            <Form.Group className="mb-3" controlId="billingAddress">
               <Form.Label>Address</Form.Label>
               <Form.Control
                 type="text"
@@ -119,13 +131,16 @@ export default function App() {
                 value={billing.address || ""}
                 required
                 onChange={handleBillingChange}
+                style={{
+                  backgroundColor: "#f1f3f5",
+                }}
               />
               <Form.Control.Feedback type="invalid">
                 Please enter your address.
               </Form.Control.Feedback>
             </Form.Group>
 
-            <Form.Group as={Col} controlId="billingcontact">
+            <Form.Group controlId="billingcontact">
               <Form.Label>Contact</Form.Label>
               <Form.Control
                 type="text"
@@ -135,6 +150,9 @@ export default function App() {
                 value={billing.contact || ""}
                 required
                 onChange={handleBillingChange}
+                style={{
+                  backgroundColor: "#f1f3f5",
+                }}
               />
               <Form.Control.Feedback type="invalid">
                 Contact number should be of 10 digits.
@@ -152,6 +170,9 @@ export default function App() {
                 value={payment.cardNumber || ""}
                 required
                 onChange={handlePaymentChange}
+                style={{
+                  backgroundColor: "#f1f3f5",
+                }}
               />
               <Form.Control.Feedback type="invalid">
                 Please enter valid credit card number.
@@ -167,6 +188,9 @@ export default function App() {
                 value={payment.expirationDate || ""}
                 required
                 onChange={handlePaymentChange}
+                style={{
+                  backgroundColor: "#f1f3f5",
+                }}
               />
               <Form.Control.Feedback type="invalid">
                 Please enter the expiration date of your credit card.
@@ -183,6 +207,9 @@ export default function App() {
                 value={payment.securityCode || ""}
                 required
                 onChange={handlePaymentChange}
+                style={{
+                  backgroundColor: "#f1f3f5",
+                }}
               />
               <Form.Control.Feedback type="invalid">
                 CVV should of 3 digits.

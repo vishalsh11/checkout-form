@@ -37,7 +37,6 @@ const ProductList = () => {
             <div className="item_details">
               <div>
                 <div className="item_name">{item.name}</div>
-                {/* <div className="item_desc">{item.description}</div> */}
                 <div className="item_price">
                   Price: {currencyFormat(item.price)}
                 </div>
@@ -61,7 +60,7 @@ const ProductList = () => {
       </div>
       <hr />
       <div className="total_prc">
-        <span>Total:</span>
+        <span>Total Amount :</span>
         <span>{currencyFormat(total)}</span>
       </div>
     </Container>

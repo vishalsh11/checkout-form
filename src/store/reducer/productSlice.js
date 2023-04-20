@@ -9,7 +9,7 @@ const initialState = {
       image:
         "https://cdn.pixabay.com/photo/2021/01/03/02/24/iphone-12-pro-5883473_1280.jpg",
       price: 499.65,
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ const initialState = {
       image:
         "https://cdn.pixabay.com/photo/2014/11/12/15/48/ebook-528463_1280.jpg",
       price: 299.33,
-      quantity: 0,
+      quantity: 1,
     },
     {
       id: 3,
@@ -29,10 +29,10 @@ const initialState = {
       image:
         "https://cdn.pixabay.com/photo/2015/11/09/14/43/laptop-1035345_1280.jpg",
       price: 899.45,
-      quantity: 0,
+      quantity: 1,
     },
   ],
-  total: 0,
+  total: 1698.43,
 };
 
 const productSlice = createSlice({

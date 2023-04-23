@@ -1,11 +1,13 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { Button, Container } from "react-bootstrap";
 import { addItem, removeItem } from "../store/reducer/productSlice";
 import { currencyFormat } from "../utils/utils";
 import "./ProductList.css";
 
-const ProductList = () => {
+const ProductList = (props) => {
+  const { showQuantityOnly } = props;
   const items = useSelector((state) => state.products.items);
   const total = useSelector((state) => state.products.total);
   const dispatch = useDispatch();
@@ -21,26 +23,29 @@ const ProductList = () => {
   return (
     <Container
       style={{
-        marginTop: "20px",
+        margin: "20px 0",
+        padding: "5px 18px",
       }}
     >
-      <div>
-        {items.map((item) => (
-          <div className="product_wrap" key={item.id}>
-            <img
-              className="product_image"
-              alt="product_img"
-              // style={{ maxHeight: "30vh", objectFit: "cover" }}
-              variant="top"
-              src={item.image}
-            />
-            <div className="item_details">
-              <div>
-                <div className="item_name">{item.name}</div>
-                <div className="item_price">
-                  Price: {currencyFormat(item.price)}
-                </div>
+      {items.map((item) => (
+        <div className="product_wrap" key={item.id}>
+          <img
+            className="product_image"
+            alt="product_img"
+            // style={{ maxHeight: "30vh", objectFit: "cover" }}
+            variant="top"
+            src={item.image}
+          />
+          <div className="item_details">
+            <div>
+              <div className="item_name">{item.name}</div>
+              <div className="item_price">
+                Price: {currencyFormat(item.price)}
               </div>
+            </div>
+            {showQuantityOnly ? (
+              <div>Quantity : {item.quantity}</div>
+            ) : (
               <div className="qty_wrap">
                 <span
                   className="qty_btn"
@@ -54,15 +59,31 @@ const ProductList = () => {
                   +
                 </span>
               </div>
-            </div>
+            )}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
       <hr />
       <div className="total_prc">
-        <span>Total Amount :</span>
+        <span>
+          Total<span className="d-none d-lg-inline"> Ammount </span>:
+        </span>
         <span>{currencyFormat(total)}</span>
       </div>
+      {showQuantityOnly && (
+        <Link to="/order-status">
+          <Button
+            variant="primary"
+            className="text-center w-100 mt-4"
+            style={{
+              fontSize: "20px",
+              fontWeight: "500",
+            }}
+          >
+            Confirm Order
+          </Button>
+        </Link>
+      )}
     </Container>
   );
 };

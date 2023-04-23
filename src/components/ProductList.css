@@ -17,10 +17,11 @@
 }
 .item_name {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .item_price {
   font-size: 16px;
+  font-weight: 500;
 }
 .item_desc {
   text-overflow: ellipsis;
@@ -62,7 +63,7 @@
 }
 .total_prc {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;

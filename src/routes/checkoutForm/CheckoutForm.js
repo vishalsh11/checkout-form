@@ -262,7 +262,7 @@ export default function CheckoutForm() {
                 VALIDATOR_EXPIRYDATE(),
                 VALIDATOR_MAXLENGTH(5),
               ]}
-              errorText="Please enter a valid expiry date (year should be between 24 to 29)."
+              errorText="Please enter a valid expiry date."
               value={payment.expirydate?.value}
               valid={payment.expirydate?.isValid}
               touched={payment.expirydate?.isTouched}

@@ -1,8 +1,9 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import { Button, Card, Container } from "react-bootstrap";
 import { currencyFormat } from "../../utils/utils";
-import { Link } from "react-router-dom";
+import { resetStore } from "../../store/reducer/productSlice";
 
 const getDate = () => {
   const today = new Date();
@@ -20,6 +21,9 @@ const orderNumber = Math.floor(Math.random() * 100000);
 
 const FeedbackScreen = () => {
   const totalPayment = useSelector((state) => state.products.total);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   return (
     <Container
       style={{
@@ -104,19 +108,21 @@ const FeedbackScreen = () => {
               You have completed your payment. Check your email for confirmation
             </Card.Text>
           </Card>
-          <Link to="/">
-            <Button
-              variant="primary"
-              type="submit"
-              className="text-center w-100 mt-4"
-              style={{
-                fontSize: "20px",
-                fontWeight: "500",
-              }}
-            >
-              Continue Shopping
-            </Button>
-          </Link>
+          <Button
+            variant="primary"
+            type="submit"
+            className="text-center w-100 mt-4"
+            style={{
+              fontSize: "20px",
+              fontWeight: "500",
+            }}
+            onClick={() => {
+              dispatch(resetStore());
+              navigate("/");
+            }}
+          >
+            Continue Shopping
+          </Button>
         </div>
       </div>
     </Container>

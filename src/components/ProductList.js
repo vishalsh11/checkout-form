@@ -8,7 +8,9 @@ import "./ProductList.css";
 
 const ProductList = (props) => {
   const { showQuantityOnly } = props;
-  const items = useSelector((state) => state.products.items);
+  const items = useSelector((state) =>
+    state.products.items.filter((item) => item.quantity > 0)
+  );
   const total = useSelector((state) => state.products.total);
   const dispatch = useDispatch();
 

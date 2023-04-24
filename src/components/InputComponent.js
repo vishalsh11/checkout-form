@@ -1,6 +1,7 @@
 import React from "react";
 import { Form } from "react-bootstrap";
 import { validate } from "../utils/validators";
+import "./InputComponent.css";
 
 const InputComponent = (props) => {
   const { id, type, placeholder, onInput, value, valid, touched, checkout } =

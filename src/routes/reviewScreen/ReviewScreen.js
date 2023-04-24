@@ -7,7 +7,7 @@ import "./ReviewScreen.css";
 
 const ReviewScreen = () => {
   const orderInfo = useSelector((state) => state.orderInfo);
-  const { shipping, billing } = orderInfo;
+  const { shipping, billing, payment } = orderInfo;
   return (
     <Container
       style={{
@@ -33,6 +33,7 @@ const ReviewScreen = () => {
         >
           <InfoCard tag="Shipping" infoObj={shipping} />
           <InfoCard tag="Billing" infoObj={billing} />
+          <InfoCard tag="Payment" infoObj={payment} />
         </Col>
         <Col>
           <Card

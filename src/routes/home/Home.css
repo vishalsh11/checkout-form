@@ -1,0 +1,15 @@
+.qty_button {
+  border: 1px solid #d4d4d4;
+  background-color: #f1f3f5;
+  padding: 0 20px;
+  font-size: 30px;
+  color: #000;
+  cursor: pointer;
+}
+
+.quantity {
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  border: 1px solid #d4d4d4;
+}

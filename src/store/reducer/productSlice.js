@@ -7,9 +7,9 @@ const initialState = {
       name: "Iphone 14",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       image:
-        "https://cdn.pixabay.com/photo/2021/01/03/02/24/iphone-12-pro-5883473_1280.jpg",
+        "https://images.pexels.com/photos/9837428/pexels-photo-9837428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 499.65,
-      quantity: 1,
+      quantity: 0,
     },
     {
       id: 2,
@@ -17,9 +17,9 @@ const initialState = {
       description:
         "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       image:
-        "https://cdn.pixabay.com/photo/2014/11/12/15/48/ebook-528463_1280.jpg",
+        "https://images.pexels.com/photos/5017187/pexels-photo-5017187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 299.33,
-      quantity: 1,
+      quantity: 0,
     },
     {
       id: 3,
@@ -27,12 +27,39 @@ const initialState = {
       description:
         "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       image:
-        "https://cdn.pixabay.com/photo/2015/11/09/14/43/laptop-1035345_1280.jpg",
+        "https://images.pexels.com/photos/4158/apple-iphone-smartphone-desk.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       price: 899.45,
-      quantity: 1,
+      quantity: 0,
+    },
+    {
+      id: 4,
+      name: "Nikon DSLR Camera",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      image:
+        "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      price: 499.65,
+      quantity: 0,
+    },
+    {
+      id: 5,
+      name: "Lipstick",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      image:
+        "https://images.pexels.com/photos/2533266/pexels-photo-2533266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      price: 499.65,
+      quantity: 0,
+    },
+    {
+      id: 6,
+      name: "Coach Perfume",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      image:
+        "https://images.pexels.com/photos/258244/pexels-photo-258244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      price: 499.65,
+      quantity: 0,
     },
   ],
-  total: 1698.43,
+  total: 0,
 };
 
 const productSlice = createSlice({
@@ -55,8 +82,9 @@ const productSlice = createSlice({
         state.total -= item.price;
       }
     },
+    resetStore: () => initialState,
   },
 });
 
-export const { addItem, removeItem } = productSlice.actions;
+export const { addItem, removeItem, resetStore } = productSlice.actions;
 export default productSlice.reducer;

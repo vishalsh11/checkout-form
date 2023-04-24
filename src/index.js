@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import store from "./store/store";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./routes/home/Home";
 import CheckoutForm from "./routes/checkoutForm/CheckoutForm";
 import ReviewScreen from "./routes/reviewScreen/ReviewScreen";
 import FeedbackScreen from "./routes/orderStatus/FeedbackScreen";
@@ -12,6 +13,10 @@ import "./index.css";
 const appRouter = createBrowserRouter([
   {
     path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/checkout-form",
     element: <CheckoutForm />,
   },
   {
